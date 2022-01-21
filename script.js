@@ -54,9 +54,9 @@ $("#elem").keyup(function(){
     var value = $(this).val();
     if(value<=31 && value>=0)
     {
-        $('input[type="submit"]').prop('disabled', true);
-    }else{
         $('input[type="submit"]').prop('disabled', false);
+    }else{
+        $('input[type="submit"]').prop('disabled', true);
     }
 });
 $(function() {
