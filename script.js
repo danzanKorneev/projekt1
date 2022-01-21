@@ -49,7 +49,7 @@ $('#checkbox_check5').click(function () {
             $('#elem').val(joy-=16)
         }
     })
-    //проверяем
+    //проверяем 
 $("#elem").keyup(function(){
     var value = $(this).val();
     if(value<=31 && value>=0)
@@ -88,30 +88,3 @@ $(function() {
         }     
     });
 });
-
-$('#elem').on('change',
-    function(){
-        var value = $(this).val();
-        if(value>=16){
-            $('#checkbox_check5').prop('checked', true)
-            $('#checkbox_check6').prop('checked', false)
-            value-=16;
-        }if(value>=8){
-            $('#checkbox_check4').prop('checked', true)
-            $('#checkbox_check6').prop('checked', false)
-            value-=8;
-        }if(value>=4){
-            $('#checkbox_check3').prop('checked', true)
-            $('#checkbox_check6').prop('checked', false)
-            value-=4;
-        }if(value>=2){
-            $('#checkbox_check2').prop('checked', true)
-            $('#checkbox_check6').prop('checked', false)
-            value-=2;
-
-        }if(value>=1){
-            $('#checkbox_check').prop('checked', true)
-            $('#checkbox_check6').prop('checked', false)
-           
-        }     
-    });
