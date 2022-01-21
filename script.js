@@ -63,7 +63,7 @@ $(function() {
   // событие изменения значения input (возникает только после потери фокуса)
   $('#elem').on('change',
     function(){
-        var value = $(this).val();
+        var value = $('#elem').val();
         if(value>=16){
             $('#checkbox_check5').prop('checked', true)
             $('#checkbox_check6').prop('checked', false)
