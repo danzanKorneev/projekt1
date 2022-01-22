@@ -10,43 +10,54 @@ $('#checkbox_check6').click(function(){
 $('#checkbox_check').click(function () {
         if ($(this).is(':checked')){
             $('#checkbox_check6').prop('checked', false)
-            
-            $('#elem').val(joy+=1)
+            joy+=1;
+            $('#elem').val(joy)
+           
         }else{
-            $('#elem').val(joy-=1)
+            joy-=1;
+            $('#elem').val(joy)
+           
         }
     })
 
 $('#checkbox_check2').click(function () {
         if ($(this).is(':checked')){
             $('#checkbox_check6').prop('checked', false)
-            $('#elem').val(joy+=2)
+            joy+=2;
+            $('#elem').val(joy)
         }else{
-            $('#elem').val(joy-=2)
+            joy-=2;
+            $('#elem').val(joy)
         }
     })
 $('#checkbox_check3').click(function () {
         if ($(this).is(':checked')){
             $('#checkbox_check6').prop('checked', false)
-            $('#elem').val(joy+=4)
+            joy+=4
+            $('#elem').val(joy)
         }else{
-            $('#elem').val(joy-=4)
+            joy-=4
+            $('#elem').val(joy)
         }
     })
 $('#checkbox_check4').click(function () {
         if ($(this).is(':checked')){
             $('#checkbox_check6').prop('checked', false)
-            $('#elem').val(joy+=8)
+            joy+=8
+            $('#elem').val(joy)
         }else{
-            $('#elem').val(joy-=8)
+            joy-=8
+            $('#elem').val(joy)
         }
     })
 $('#checkbox_check5').click(function () {
         if ($(this).is(':checked')){
             $('#checkbox_check6').prop('checked', false)
-            $('#elem').val(joy+=16)
+            joy+=16
+            $('#elem').val(joy)
         }else{
-            $('#elem').val(joy-=16)
+            joy-=16
+            $('#elem').val(joy)
         }
     })
     //проверяем 
@@ -70,26 +81,32 @@ $('#elem').on('change', function (){
   $('#elem').on('change',
     function(){
         var value = $('#elem').val();
+        joy=value;
         if(value>=16){
             $('#checkbox_check5').prop('checked', true)
             $('#checkbox_check6').prop('checked', false)
+            
             value-=16;
         }if(value>=8){
             $('#checkbox_check4').prop('checked', true)
             $('#checkbox_check6').prop('checked', false)
+            
             value-=8;
         }if(value>=4){
             $('#checkbox_check3').prop('checked', true)
             $('#checkbox_check6').prop('checked', false)
+            
             value-=4;
         }if(value>=2){
             $('#checkbox_check2').prop('checked', true)
             $('#checkbox_check6').prop('checked', false)
+            
             value-=2;
 
         }if(value>=1){
             $('#checkbox_check').prop('checked', true)
             $('#checkbox_check6').prop('checked', false)
+           
            
         }     
     });
