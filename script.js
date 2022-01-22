@@ -59,8 +59,14 @@ $("#elem").keyup(function(){
         $('input[type="submit"]').prop('disabled', true);
     }
 });
-$(function() {
-  // событие изменения значения input (возникает только после потери фокуса)
+$('#elem').on('change', function (){
+    $('#checkbox_check').prop('checked', false)
+    $('#checkbox_check2').prop('checked', false)
+    $('#checkbox_check3').prop('checked', false)
+    $('#checkbox_check4').prop('checked', false)
+    $('#checkbox_check5').prop('checked', false)
+    $('#checkbox_check6').prop('checked', false)
+  }),
   $('#elem').on('change',
     function(){
         var value = $('#elem').val();
@@ -87,4 +93,3 @@ $(function() {
            
         }     
     });
-});
